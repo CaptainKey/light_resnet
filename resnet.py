@@ -27,7 +27,7 @@ class ResNetBlock(nn.Module):
         self.downsampling = False
 
         # Si les dimensions d entree et de sortie de sont pas egales
-        # ex : in_depth = 64 | out_depth = out_depth
+        # ex : in_depth = 64 | out_depth = 128
         if self.in_depth != self.out_depth:
             self.downsampling = nn.Sequential(
                                     nn.Conv2d(in_depth, out_depth, kernel_size=1, stride=2, bias=False),
